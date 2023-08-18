@@ -1,4 +1,4 @@
-package com.application.Concesionaria.domain.service;
+package com.application.Concesionaria.domain.useCase;
 
 import com.application.Concesionaria.domain.dto.CustomerDto;
 import com.application.Concesionaria.domain.dto.PasswordGenerationDto;
@@ -46,6 +46,7 @@ public interface ICustomerService {
     CustomerDto save(CustomerDto newCustomerDto);
 
     PasswordGenerationDto getPasswordGenerationDto(CustomerDto passwordGenerationDto);
+
     /**
      * Actualiza un cliente existente en el repositorio.
      *

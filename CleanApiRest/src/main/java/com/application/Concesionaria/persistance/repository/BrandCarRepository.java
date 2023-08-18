@@ -4,6 +4,7 @@ import com.application.Concesionaria.domain.dto.BrandCarDto;
 import com.application.Concesionaria.domain.repository.IBrandCarRepository;
 import com.application.Concesionaria.persistance.entity.BrandCarEntity;
 import com.application.Concesionaria.persistance.mapper.IBrandCarMapper;
+import com.application.Concesionaria.persistance.crud.IBrandCarCrudRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 

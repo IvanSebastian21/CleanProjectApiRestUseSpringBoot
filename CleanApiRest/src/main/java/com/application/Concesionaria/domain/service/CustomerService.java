@@ -3,6 +3,8 @@ package com.application.Concesionaria.domain.service;
 import com.application.Concesionaria.domain.dto.CustomerDto;
 import com.application.Concesionaria.domain.dto.PasswordGenerationDto;
 import com.application.Concesionaria.domain.repository.ICustomerRepository;
+import com.application.Concesionaria.domain.useCase.ICustomerService;
+import com.application.Concesionaria.exception.EmailValidationException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -45,6 +47,7 @@ public class CustomerService implements ICustomerService {
      */
     @Override
     public Optional<CustomerDto> getCustomerDtoCarId(String cardId) {
+
         return iCustomerRepository.getCustomerDtoCarId(cardId);
     }
 
@@ -74,6 +77,11 @@ public class CustomerService implements ICustomerService {
     public PasswordGenerationDto getPasswordGenerationDto(CustomerDto passwordGenerationDto) {
         // Generar nueva contraseña
         String newPassword = generateNewPassword();
+
+        // Validación de nivel servicio para el controlador.
+        if (!passwordGenerationDto.getEmail().matches("^[A-Za-z0-9+_.-]+@(.+\\.com)$")) {
+            throw new EmailValidationException();
+        }
 
         // Actualizar la contraseña en la base de datos
         CustomerDto existingCustomerDto = iCustomerRepository.getCustomerDtoCarId(passwordGenerationDto.getCardId())

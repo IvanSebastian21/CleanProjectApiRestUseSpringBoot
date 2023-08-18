@@ -4,6 +4,7 @@ import com.application.Concesionaria.domain.dto.CustomerDto;
 import com.application.Concesionaria.domain.repository.ICustomerRepository;
 import com.application.Concesionaria.persistance.entity.CustomerEntity;
 import com.application.Concesionaria.persistance.mapper.ICustomerMapper;
+import com.application.Concesionaria.persistance.crud.ICustomerCrudRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 

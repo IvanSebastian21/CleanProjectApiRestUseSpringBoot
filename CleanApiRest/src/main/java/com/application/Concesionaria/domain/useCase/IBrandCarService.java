@@ -1,4 +1,4 @@
-package com.application.Concesionaria.domain.service;
+package com.application.Concesionaria.domain.useCase;
 
 import com.application.Concesionaria.domain.dto.BrandCarDto;
 

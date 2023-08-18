@@ -2,6 +2,7 @@ package com.application.Concesionaria.domain.service;
 
 import com.application.Concesionaria.domain.dto.BrandCarDto;
 import com.application.Concesionaria.domain.repository.IBrandCarRepository;
+import com.application.Concesionaria.domain.useCase.IBrandCarService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

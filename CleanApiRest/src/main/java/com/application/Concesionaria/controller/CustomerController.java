@@ -1,7 +1,7 @@
 package com.application.Concesionaria.controller;
 
 import com.application.Concesionaria.domain.dto.CustomerDto;
-import com.application.Concesionaria.domain.service.ICustomerService;
+import com.application.Concesionaria.domain.useCase.ICustomerService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
