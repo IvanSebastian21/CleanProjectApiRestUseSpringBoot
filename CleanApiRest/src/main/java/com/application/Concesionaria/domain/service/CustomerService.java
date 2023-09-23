@@ -4,7 +4,7 @@ import com.application.Concesionaria.domain.dto.CustomerDto;
 import com.application.Concesionaria.domain.dto.PasswordGenerationDto;
 import com.application.Concesionaria.domain.repository.ICustomerRepository;
 import com.application.Concesionaria.domain.useCase.ICustomerService;
-import com.application.Concesionaria.exception.EmailValidationException;
+import com.application.Concesionaria.exception.validators.EmailValidationException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

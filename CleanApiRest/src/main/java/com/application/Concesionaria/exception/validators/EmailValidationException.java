@@ -1,4 +1,4 @@
-package com.application.Concesionaria.exception;
+package com.application.Concesionaria.exception.validators;
 
 public class EmailValidationException extends RuntimeException{
 

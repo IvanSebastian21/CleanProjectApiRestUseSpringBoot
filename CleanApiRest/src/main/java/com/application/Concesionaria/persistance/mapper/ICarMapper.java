@@ -11,6 +11,7 @@ import java.util.List;
 public interface ICarMapper {
     CarDto toCarDto(CarEntity carEntity);
     @Mapping(target = "brandCarEntity", ignore = true)
+    @Mapping(target = "carPurchaseEntityList", ignore = true)
     CarEntity toCarEntity(CarDto carDto);
     List<CarDto> toCarsDtoList(List<CarEntity> carEntityList);
 

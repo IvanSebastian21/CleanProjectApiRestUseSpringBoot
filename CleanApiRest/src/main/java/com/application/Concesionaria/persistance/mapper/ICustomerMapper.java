@@ -34,6 +34,7 @@ public interface ICustomerMapper {
      */
     // Agregar función para asignar cardId en la entidad a partir del DTO
     @Mapping(target = "cardId", source = "cardId")
+    @Mapping(target = "carPurchaseEntityList", ignore = true)
     CustomerEntity toCustomerEntity(CustomerDto customerDto);
 
     /**

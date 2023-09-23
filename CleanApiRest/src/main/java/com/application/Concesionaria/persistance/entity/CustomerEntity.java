@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.util.List;
+
 /**
  * Clase que representa la entidad de cliente en la base de datos.
  *
@@ -42,4 +45,7 @@ public class CustomerEntity {
     private Integer active;
     @Column(name = "contrasenia")
     private String password;
+
+    @OneToMany(mappedBy = "customerEntity")
+    private List<PurchaseEntity> purchaseEntityList;
 }
